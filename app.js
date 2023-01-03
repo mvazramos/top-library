@@ -15,15 +15,6 @@ function addNewBook(bookObject){
     
     const editButton = document.createElement("button");
     const deleteButton = document.createElement("button");
-
-    
-    buttonsBook.classList.add("book-buttons");
-    editButton.textContent="Edit";
-    deleteButton.textContent="Delete";
-    
-    buttonsBook.appendChild(editButton);
-    buttonsBook.appendChild(deleteButton);
-    
     
     imageBook.src=bookObject.imgURL;
     
@@ -39,6 +30,31 @@ function addNewBook(bookObject){
     titleLi.textContent=`Title: ${bookObject.title}`;
     authorLi.textContent = `Author: ${bookObject.author}`;
     pagesLi.textContent = `Pages: ${bookObject.pages}`;
+
+    buttonsBook.classList.add("book-buttons");
+    editButton.textContent="Edit";
+    deleteButton.textContent="Delete";
+
+    deleteButton.id=`${bookObject.title}`;
+    newBook.id = `${bookObject.title}`;
+
+    deleteButton.addEventListener("click",(e)=>{
+        let id=e.target.id;
+
+        function checkIndex(e){
+            return e.title===id;
+        }
+        
+        let index = myLibrary.findIndex(checkIndex);
+        myLibrary.splice(index,1);
+        
+        const element =  document.getElementById(id);
+        element.remove();
+
+    });
+
+    buttonsBook.appendChild(editButton);
+    buttonsBook.appendChild(deleteButton);
 
 
     const listElements = [titleLi, authorLi, pagesLi,readLi];
@@ -111,6 +127,7 @@ form.addEventListener('submit', (e)=>{
 })
 
 
+
 function openForm() {
     document.getElementById("myForm").style.display = "block";
   }
@@ -123,5 +140,10 @@ function closeForm() {
 
 addBookToLibrary("1984","George Orwell",328,"Sim", "https://i0.wp.com/www.printmag.com/wp-content/uploads/2017/01/2a34d8_a6741e88335241308890543d203ad89dmv2.jpg?resize=500%2C815&ssl=1")
 addBookToLibrary("The Old Man and the Sea","Ernest Hemingway", 127, "Sim","https://kbimages1-a.akamaihd.net/ec4fa901-6bb8-44f2-9aa1-ee8db64aef20/1200/1200/False/old-man-and-the-sea-5.jpg")
+addBookToLibrary("Abraço","José Luís Peixoto", 664, "Sim","https://img.wook.pt/images/abraco-jose-luis-peixoto/MXwxMTUxOTMyM3w3MDkwNTI1fDEzODM1ODEyODYwMDB8d2VicA==/550x");
 
-renderLibrary(myLibrary=myLibrary);
+renderLibrary(myLibrary);
+
+
+
+
