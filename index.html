@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Project</title>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div>
+                <h1>The Odin Project: Library</h1>
+            </div>
+            <button class="login-button">Login</button>
+        </div>
+    </header>
+    <main>
+        
+            <div class="new-book">
+                <button class="open-form" onclick="openForm()">New Book</button>
+            </div>
+
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <h1>Add Book:</h1>
+              
+                  <label for="title"><b>Title</b></label>
+                  <input type="text" placeholder="Enter Title" name="title" required>
+              
+                  <label for="author"><b>Author</b></label>
+                  <input type="text" placeholder="Enter Author" name="author" required>
+              
+                  <label for="imgURL">Image URL:</label>
+                  <input type="text" placeholder="Image URL" name="imgURL" required>
+
+                  <label for="pages">Pages:</label>
+                  <input type="number" placeholder="Number of Pages" name="pages" min="3" required>
+                    
+                  <div>
+                    <button type="submit" class="btn" id="submit-button">Add</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                  </div>
+                   </form>
+              </div>
+
+            <div class="book-display">
+            </div>
+      
+    </main>
+    <footer> <p>@mvazramos</p></footer>
+</body>
+</html>

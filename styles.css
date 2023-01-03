@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Anybody','Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+}
+
+header{
+    width: 100vw;
+    height: 10vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: #fdba74;
+}
+
+.header-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    color: #78350f;
+    font-weight: 1000;
+    padding: 10px;
+}
+
+.login-button{
+    background-color: #f59e0b;
+    color: #78350f;
+    font-weight: 900;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+main{
+    width: 100vw;
+    height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.book-display{
+    width: 85vw;
+    height: 75vh;
+    padding: 10px;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-auto-rows: 400px;
+    gap: 10px;
+
+    overflow:scroll;
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    border: 2px solid #fed7aa;
+}
+
+.cover{
+    height: 200px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin-bottom: 7.5px;
+}
+.book-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.book-buttons button{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+footer{
+    width: 100vw;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdba74;
+    /* border: 2px dashed black; */
+}
+
+
+
+
+
+/*Form and Button*/
+
+.new-book{
+    width: 85vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-bottom: 1rem;
+}
+
+.new-book button{
+    border-radius: 5px;
+}
+
+
+.open-form {
+    background-color: #f59e0b;
+    color: #78350f;
+    font-weight: 900;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+.form-popup {
+    display: none;
+    position: fixed;
+    border: 3px solid rgb(235, 188, 128);
+    background-color: rgb(235, 188, 128);
+    border-radius: 10px;
+    z-index: 9;
+  }
+
+.form-container {
+    min-width: 400px;
+    max-width: 400px;
+    padding: 10px;
+    background-color: rgb(235, 188, 128);
+
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 5px;
+    
+}
+
+.form-container div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.form-container input, .form-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container input:focus, .form-container input:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+.form-container .btn {
+    background-color: #e79b0d;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor:pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.form-container .cancel {
+    background-color: rgb(255, 8, 8);
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-form:hover {
+    opacity: 0.6;
+  }
