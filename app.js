@@ -100,15 +100,11 @@ function addBookElement(bookObject){
             functionality to change status in object 
         */
         let status = e.target.checked;
-
-        console.log(bookObject.id);
         myLibrary.forEach((e)=>{
             if(bookObject.id===e.id){
                 e.read=status;
             }
         });
-
-        console.log(myLibrary);
     })
 
     labelCheck.appendChild(inputCheck);
