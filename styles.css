@@ -20,8 +20,8 @@ body{
 
 header{
     width: 100vw;
-    height: 10vh;
-    padding: 10px;
+    height: 15vh;
+    padding:10px 20px 20px 10px;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -69,7 +69,7 @@ main{
 
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
     grid-auto-rows: 400px;
     gap: 10px;
 
@@ -104,16 +104,27 @@ li{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     gap: 1rem;
 }
 
 .book-buttons button{
-    padding: 5px;
-    border-radius: 10px;
+    padding: 0 15px 0 0;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
 }
 
+.book-buttons button img{
+    width: 22px;
+    height: auto;
+}
+
+.check-container{
+    accent-color: rgb(26, 181, 26);
+}
 
 footer{
     width: 100vw;
